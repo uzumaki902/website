@@ -1,26 +1,58 @@
+import Image from "next/image";
+
 export default function WelcomeSection() {
   return (
-    <section id="about" className="relative bg-blue-wash py-24 md:py-32 px-8">
-      {/* Side gradient fades for soft blue wash effect */}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#d4dff0] to-transparent" />
-      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#d4dff0] to-transparent" />
+    <section id="about" className="relative bg-[#F9F6F0] py-16 md:py-24">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_480px] min-h-[550px] items-stretch">
+        {/* Left – Text Copy */}
+        <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-8 lg:py-12">
+          {/* Main Serif Heading */}
+          <h2 className="font-serif text-[32px] md:text-[44px] lg:text-[50px] font-light text-[#3D3530] leading-[1.2] max-w-2xl mb-12 md:mb-16">
+            You’re holding onto hope that life can be better than it is right
+            now.
+          </h2>
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <p className="font-sans text-xs tracking-[0.3em] uppercase text-teal mb-8">
-          CONEJO VALLEY FAMILY COUNSELING
-        </p>
-        <h2 className="font-serif text-3xl md:text-[44px] lg:text-[50px] font-light text-charcoal leading-[1.2] mb-10">
-          It&apos;s about understanding where you&apos;ve been{" "}
-          <span className="font-script text-teal">&amp;</span> helping shape
-          where you&apos;re headed.
-        </h2>
-        <p className="font-sans text-sm md:text-base text-brown-light leading-[1.8] max-w-2xl mx-auto">
-          Therapy is a powerful tool for self-discovery and growth. Our
-          compassionate team creates a space where you can explore your
-          experiences, develop new perspectives, and build the life you want.
-          Whether you&apos;re dealing with anxiety, relationship challenges, or
-          simply seeking greater self-understanding, we&apos;re here to help.
-        </p>
+          {/* Two Paragraph Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-3xl">
+            {/* Column 1 */}
+            <div>
+              <p className="font-sans text-xs md:text-sm text-[#7A6E63] tracking-[0.15em] uppercase font-semibold mb-4 leading-relaxed">
+                AT CONEJO VALLEY FAMILY COUNSELING WE WANT TO MAKE THAT HOPE A
+                REALITY.
+              </p>
+              <p className="font-sans text-sm md:text-[15px] text-[#7A6E63] leading-[1.8]">
+                Whether you&apos;re an adult seeking personal growth, looking to
+                work through your trauma, a couple working on your
+                relationship, or a parent looking for support for your child,
+                we provide a compassionate and safe space to help you navigate
+                all of life&apos;s ups and downs.
+              </p>
+            </div>
+
+            {/* Column 2 */}
+            <div>
+              <p className="font-sans text-sm md:text-[15px] text-[#7A6E63] leading-[1.8]">
+                First and foremost, we believe what you&apos;re going through is
+                real, valid, and worthy of support. Our team offers clients in
+                the Newbury Park area and across CA an environment to discover a
+                new life and a deeper sense of self in the midst of their
+                struggles. As we tap into the power of connection and
+                understanding, you can find your footing again and take a
+                transformative path forward.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right – Tall Beach Ocean Shore Image */}
+        <div className="relative min-h-[400px] lg:min-h-full w-full">
+          <Image
+            src="/images/ocean-shore.jpg"
+            alt="Soft ocean waves washing onto sand"
+            fill
+            className="object-cover object-center"
+          />
+        </div>
       </div>
     </section>
   );
