@@ -27,13 +27,43 @@ const specialties = [
 
 export default function SpecialtiesSection() {
   return (
-    <section id="specialties-cards" className="bg-[#F7F5F0] py-[120px] px-[80px]">
+    <section id="specialties-cards" className="bg-[#F7F5F0] py-14 md:py-20 lg:py-[120px] px-6 md:px-10 lg:px-[80px]">
       <div className="max-w-[1280px] mx-auto">
+
+        {/* ── MOBILE / TABLET: heading then stacked cards ── */}
+        <div className="lg:hidden">
+          <h2 className="font-serif text-[32px] md:text-[38px] font-light text-[#2C3A36] leading-tight mb-10">
+            Our{" "}
+            <span className="font-script text-[#62929A] italic text-[40px] md:text-[48px] inline-block mx-1">
+              specialties
+            </span>{" "}
+            include...
+          </h2>
+          <div className="flex flex-col gap-10">
+            {specialties.map((item) => (
+              <div key={item.title} className="flex flex-col pb-8 border-b border-[#E0D9CC] last:border-0">
+                <h3 className="font-serif text-[26px] font-light text-[#2C3A36] mb-3">
+                  {item.title}
+                </h3>
+                <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.8] mb-5">
+                  {item.description}
+                </p>
+                <a
+                  href={item.link}
+                  className="inline-block font-sans text-[12px] tracking-[0.18em] uppercase text-[#7A6E63] border-b border-[#7A6E63] pb-1 hover:text-[#62929A] hover:border-[#62929A] transition-colors w-fit"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── DESKTOP: left heading + right 2x2 grid ── */}
         <div
-          className="grid gap-16 items-start"
+          className="hidden lg:grid gap-16 items-start"
           style={{ gridTemplateColumns: "360px 1fr" }}
         >
-          {/* Left – Heading */}
           <div className="pt-2">
             <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-tight">
               Our{" "}
@@ -43,8 +73,6 @@ export default function SpecialtiesSection() {
               include...
             </h2>
           </div>
-
-          {/* Right – 2x2 Grid of Specialty Cards */}
           <div
             className="grid gap-x-12 gap-y-12"
             style={{ gridTemplateColumns: "1fr 1fr" }}

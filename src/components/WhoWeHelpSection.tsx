@@ -26,22 +26,21 @@ const cards = [
 
 export default function WhoWeHelpSection() {
   return (
-    <section className="bg-[#F7F5F0] py-[120px] px-[80px]">
+    <section className="bg-[#F7F5F0] py-14 md:py-20 lg:py-[120px] px-6 md:px-10 lg:px-[80px]">
       <div className="max-w-[1280px] mx-auto">
         {/* Section Heading */}
-        <h2 className="font-serif text-[46px] font-light text-[#2C3A36] mb-16">
+        <h2 className="font-serif text-[36px] md:text-[40px] lg:text-[46px] font-light text-[#2C3A36] mb-10 md:mb-14 lg:mb-16">
           Who we{" "}
-          <span className="font-script text-[#62929A] italic text-[56px] inline-block ml-1">
+          <span className="font-script text-[#62929A] italic text-[44px] md:text-[50px] lg:text-[56px] inline-block ml-1">
             help
           </span>
         </h2>
 
-        {/* 3 Column Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        {/* 1 col on mobile/tablet, 3 col on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
           {cards.map((card) => (
             <div key={card.title} className="flex flex-col">
-              {/* Square Image Container */}
-              <div className="relative aspect-square w-full mb-6 overflow-hidden">
+              <div className="relative aspect-square w-full mb-5 overflow-hidden">
                 <Image
                   src={card.image}
                   alt={card.alt}
@@ -49,13 +48,9 @@ export default function WhoWeHelpSection() {
                   className="object-cover object-center"
                 />
               </div>
-
-              {/* Card Title */}
-              <h3 className="font-serif text-[28px] font-light text-[#2C3A36] mb-3">
+              <h3 className="font-serif text-[26px] md:text-[28px] font-light text-[#2C3A36] mb-3">
                 {card.title}
               </h3>
-
-              {/* Card Description */}
               <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.7]">
                 {card.description}
               </p>

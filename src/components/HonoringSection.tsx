@@ -3,8 +3,31 @@ import Image from "next/image";
 export default function HonoringSection() {
   return (
     <section className="bg-[#F7F5F0] overflow-hidden p-0 m-0">
+
+      {/* ── MOBILE / TABLET: image first, then text ── */}
+      <div className="lg:hidden">
+        <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
+          <Image
+            src="/images/honoring-family.png"
+            alt="Family of four standing in shallow ocean water looking out at the sea"
+            fill
+            className="object-cover object-center"
+          />
+        </div>
+        <div className="px-6 md:px-10 py-12 md:py-16">
+          <h2 className="font-serif text-[30px] md:text-[38px] font-light text-[#2C3A36] leading-[1.25]">
+            Honoring where you&apos;ve been{" "}
+            <span className="font-script text-[#62929A] italic text-[38px] md:text-[46px] inline-block mx-1">
+              &amp;
+            </span>{" "}
+            helping shape where you&apos;re headed.
+          </h2>
+        </div>
+      </div>
+
+      {/* ── DESKTOP: 2-column 50/50 grid ── */}
       <div
-        className="grid min-h-[620px]"
+        className="hidden lg:grid min-h-[620px]"
         style={{ gridTemplateColumns: "1fr 1fr" }}
       >
         {/* Left – Full-bleed Image, flush to left edge */}
@@ -16,7 +39,6 @@ export default function HonoringSection() {
             className="object-cover object-center"
           />
         </div>
-
         {/* Right – Statement Heading */}
         <div className="flex flex-col justify-center px-[80px] py-[120px] bg-[#F7F5F0]">
           <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-[1.25] max-w-lg">
