@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CtaSection() {
   return (
-    <section id="contact" className="relative bg-[#FAF8F5] py-16 md:py-24 border-t border-[#E8E0D2] overflow-hidden">
+    <section id="contact" className="relative bg-white py-16 md:py-24 overflow-hidden border-none">
       <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_450px] xl:grid-cols-[260px_1fr_520px] items-center min-h-[580px]">
         {/* Left Inset Image */}
         <div className="hidden lg:block relative h-[380px] w-full pl-8 pr-4 my-auto">

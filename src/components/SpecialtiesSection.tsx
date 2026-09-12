@@ -27,7 +27,7 @@ const specialties = [
 
 export default function SpecialtiesSection() {
   return (
-    <section id="specialties-cards" className="bg-white py-20 md:py-28 px-8 md:px-16 lg:px-24 border-t border-[#E8E0D2]">
+    <section id="specialties-cards" className="bg-white py-20 md:py-28 px-8 md:px-16 lg:px-24 border-none">
       <div className="max-w-[1240px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 lg:gap-16 items-start">
           {/* Left – Heading */}

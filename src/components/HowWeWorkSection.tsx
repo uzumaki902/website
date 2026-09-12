@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HowWeWorkSection() {
   return (
     <section className="relative bg-sand-light">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] min-h-[600px]">
-        {/* Left – Text Content */}
+        {/* Left Text Content */}
         <div className="px-8 md:px-16 lg:px-20 py-16 md:py-24">
           <p className="font-sans text-xs tracking-[0.3em] uppercase text-teal mb-10">
             HOW WE WORK
@@ -43,9 +44,15 @@ export default function HowWeWorkSection() {
               </p>
             </div>
           </div>
+          
+          <div className="mt-16">
+            <Link href="#" className="font-sans text-xs md:text-sm tracking-[0.15em] uppercase text-charcoal border-b border-charcoal pb-1 hover:text-teal hover:border-teal transition-colors">
+              LEARN MORE ABOUT US
+            </Link>
+          </div>
         </div>
 
-        {/* Right – Tall Image */}
+        {/* Right Tall Image */}
         <div className="relative min-h-[400px] lg:min-h-0">
           <Image
             src="/images/woman-beach.jpg"
