@@ -19,19 +19,19 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer>
-      {/* Main Footer */}
-      <div className="bg-footer-bg py-16 md:py-20 px-8">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
+    <footer className="w-full">
+      {/* Main Footer (White Background) */}
+      <div className="bg-white py-16 md:py-20 px-8 md:px-16 lg:px-24">
+        <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand */}
           <div>
-            <p className="font-serif text-3xl md:text-[36px] font-light text-charcoal mb-1">
+            <p className="font-serif text-3xl md:text-[36px] font-light text-[#3D3530] mb-1">
               Conejo Valley
             </p>
-            <p className="font-sans text-xs tracking-[0.3em] uppercase text-brown-light mb-6">
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-[#7A6E63] mb-6">
               FAMILY COUNSELING
             </p>
-            <p className="font-sans text-sm text-brown-light leading-[1.8]">
+            <p className="font-sans text-xs md:text-sm text-[#7A6E63] leading-[1.8] max-w-xs">
               We want to make getting started simple. You&apos;re welcome to
               come into our office in Newbury Park or schedule virtual
               appointments from anywhere in CA—whatever works best for you.
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Navigate */}
           <div>
-            <h4 className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-charcoal mb-6">
+            <h4 className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#3D3530] mb-6">
               NAVIGATE
             </h4>
             <ul className="flex flex-col gap-3">
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-sans text-sm text-brown-light hover:text-teal transition-colors"
+                    className="font-sans text-xs md:text-sm text-[#7A6E63] hover:text-[#7A9E9F] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Our Team */}
           <div>
-            <h4 className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-charcoal mb-6">
+            <h4 className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#3D3530] mb-6">
               OUR TEAM
             </h4>
             <ul className="flex flex-col gap-3">
@@ -67,7 +67,7 @@ export default function Footer() {
                 <li key={name}>
                   <a
                     href="#team"
-                    className="font-sans text-sm text-brown-light hover:text-teal transition-colors"
+                    className="font-sans text-xs md:text-sm text-[#7A6E63] hover:text-[#7A9E9F] transition-colors"
                   >
                     {name}
                   </a>
@@ -78,17 +78,17 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-charcoal mb-6">
+            <h4 className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#3D3530] mb-6">
               CONTACT
             </h4>
-            <div className="font-sans text-sm text-brown-light leading-[1.8] flex flex-col gap-1">
+            <div className="font-sans text-xs md:text-sm text-[#7A6E63] leading-[1.8] flex flex-col gap-1">
               <p>925 Broadbeck Dr</p>
               <p>Suites 200 and 225</p>
               <p>Newbury Park, CA 91320</p>
               <p className="mt-2">
                 <a
                   href="mailto:info@conejovalleycounseling.com"
-                  className="hover:text-teal transition-colors"
+                  className="hover:text-[#7A9E9F] transition-colors"
                 >
                   info@conejovalleycounseling.com
                 </a>
@@ -96,12 +96,12 @@ export default function Footer() {
               <p>
                 <a
                   href="tel:+18052423120"
-                  className="hover:text-teal transition-colors"
+                  className="hover:text-[#7A9E9F] transition-colors"
                 >
                   805.242.3120
                 </a>
               </p>
-              <p className="mt-4 text-xs leading-[1.8] italic">
+              <p className="mt-4 text-xs leading-[1.8] italic text-[#7A6E63]">
                 Serving Thousand Oaks, Westlake Village, Camarillo, Moorpark, &amp;
                 Simi Valley
               </p>
@@ -110,9 +110,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="bg-gradient-to-r from-footer-bar via-teal to-teal-light py-4 px-8">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-center gap-2">
+      {/* Bottom Bar (Teal Accent #8AABAB Background) */}
+      <div className="bg-[#8AABAB] py-3.5 px-8">
+        <div className="max-w-[1240px] mx-auto flex items-center justify-center">
           <p className="font-sans text-xs text-white/90">
             <a href="#" className="hover:text-white transition-colors">Terms</a>
             {" | "}
