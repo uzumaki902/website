@@ -61,7 +61,8 @@ export default function HeroSection() {
           </p>
           <div className="mb-auto">
             <h1 className="font-serif text-[52px] font-light text-[#2C3A36] leading-[1.2] mb-8">
-              Rebuild your foundation on solid ground and finally begin to{" "}
+              Rebuild your foundation on
+              <div>solid ground and finally begin to {''}</div>
               <span className="font-script text-[#62929A] italic text-[64px] inline-block ml-1">
                 thrive.
               </span>
