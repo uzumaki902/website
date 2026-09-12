@@ -22,7 +22,7 @@ export default function Navbar() {
           <span className="font-serif text-2xl md:text-[28px] font-light text-charcoal tracking-wide">
             Conejo Valley
           </span>
-          <span className="font-sans text-[10px] md:text-xs text-brown-light tracking-[0.35em] uppercase">
+          <span className="font-sans text-[10px] md:text-xs text-teal tracking-[0.35em] uppercase">
             Family Counseling
           </span>
         </a>

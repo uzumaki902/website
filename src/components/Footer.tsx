@@ -28,13 +28,13 @@ export default function Footer() {
             <p className="font-serif text-3xl md:text-[36px] font-light text-[#3D3530] mb-1">
               Conejo Valley
             </p>
-            <p className="font-sans text-xs tracking-[0.3em] uppercase text-[#7A6E63] mb-6">
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-teal mb-6">
               FAMILY COUNSELING
             </p>
             <p className="font-sans text-xs md:text-sm text-[#7A6E63] leading-[1.8] max-w-xs">
               We want to make getting started simple. You&apos;re welcome to
               come into our office in Newbury Park or schedule virtual
-              appointments from anywhere in CA—whatever works best for you.
+              appointments from anywhere in CA?"whatever works best for you.
             </p>
           </div>
 
