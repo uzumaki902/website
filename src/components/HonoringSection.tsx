@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HonoringSection() {
   return (
-    <section className="bg-[#FAF8F5] border-t border-[#E8E0D2] overflow-hidden">
+    <section className="bg-white border-t border-[#E8E0D2] overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left – Flush to Left Screen Edge Image (0px left margin/padding) */}
         <div className="relative w-full aspect-[16/10] lg:aspect-auto lg:h-[520px] overflow-hidden">
