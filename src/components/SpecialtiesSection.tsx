@@ -27,14 +27,17 @@ const specialties = [
 
 export default function SpecialtiesSection() {
   return (
-    <section id="specialties-cards" className="bg-white py-20 md:py-28 px-8 md:px-16 lg:px-24 border-none">
-      <div className="max-w-[1240px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 lg:gap-16 items-start">
+    <section id="specialties-cards" className="bg-[#F7F5F0] py-[120px] px-[80px]">
+      <div className="max-w-[1280px] mx-auto">
+        <div
+          className="grid gap-16 items-start"
+          style={{ gridTemplateColumns: "360px 1fr" }}
+        >
           {/* Left – Heading */}
-          <div className="lg:pt-2">
-            <h2 className="font-serif text-3xl md:text-[38px] font-light text-[#3D3530] leading-tight">
+          <div className="pt-2">
+            <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-tight">
               Our{" "}
-              <span className="font-script text-[#7A9E9F] italic text-4xl md:text-[50px] inline-block mx-1">
+              <span className="font-script text-[#62929A] italic text-[52px] inline-block mx-1">
                 specialties
               </span>{" "}
               include...
@@ -42,21 +45,24 @@ export default function SpecialtiesSection() {
           </div>
 
           {/* Right – 2x2 Grid of Specialty Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
+          <div
+            className="grid gap-x-12 gap-y-12"
+            style={{ gridTemplateColumns: "1fr 1fr" }}
+          >
             {specialties.map((item) => (
               <div key={item.title} className="flex flex-col justify-between">
                 <div>
-                  <h3 className="font-serif text-2xl md:text-[26px] font-light text-[#3D3530] mb-4">
+                  <h3 className="font-serif text-[28px] font-light text-[#2C3A36] mb-4">
                     {item.title}
                   </h3>
-                  <p className="font-sans text-xs md:text-sm text-[#7A6E63] leading-[1.8] mb-8">
+                  <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.8] mb-8">
                     {item.description}
                   </p>
                 </div>
                 <div>
                   <a
                     href={item.link}
-                    className="inline-block font-sans text-xs tracking-[0.2em] uppercase text-[#7A6E63] border-b border-[#7A6E63] pb-1 hover:text-[#7A9E9F] hover:border-[#7A9E9F] transition-colors"
+                    className="inline-block font-sans text-[12px] tracking-[0.18em] uppercase text-[#7A6E63] border-b border-[#7A6E63] pb-1 hover:text-[#62929A] hover:border-[#62929A] transition-colors"
                   >
                     LEARN MORE
                   </a>

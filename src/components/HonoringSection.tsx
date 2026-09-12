@@ -2,10 +2,13 @@ import Image from "next/image";
 
 export default function HonoringSection() {
   return (
-    <section className="bg-white overflow-hidden p-0 m-0 border-none">
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-        {/* Left – Flush to Left and Top Screen Edge Image (0px gap/border) */}
-        <div className="relative w-full aspect-[16/10] lg:aspect-auto lg:h-[520px] overflow-hidden">
+    <section className="bg-[#F7F5F0] overflow-hidden p-0 m-0">
+      <div
+        className="grid min-h-[620px]"
+        style={{ gridTemplateColumns: "1fr 1fr" }}
+      >
+        {/* Left – Full-bleed Image, flush to left edge */}
+        <div className="relative w-full min-h-[620px] overflow-hidden">
           <Image
             src="/images/honoring-family.png"
             alt="Family of four standing in shallow ocean water looking out at the sea"
@@ -14,14 +17,14 @@ export default function HonoringSection() {
           />
         </div>
 
-        {/* Right – Statement Heading with Right Padding */}
-        <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 xl:px-24 py-12 md:py-16">
-          <h2 className="font-serif text-[32px] md:text-[42px] lg:text-[48px] font-light text-[#3D3530] leading-[1.25] max-w-lg">
-            Honoring where you’ve been{" "}
-            <span className="font-script text-[#7A9E9F] italic text-4xl md:text-[52px] lg:text-[60px] inline-block mx-1">
+        {/* Right – Statement Heading */}
+        <div className="flex flex-col justify-center px-[80px] py-[120px] bg-[#F7F5F0]">
+          <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-[1.25] max-w-lg">
+            Honoring where you&apos;ve been{" "}
+            <span className="font-script text-[#62929A] italic text-[52px] inline-block mx-1">
               &amp;
             </span>{" "}
-            helping shape where you’re headed.
+            helping shape where you&apos;re headed.
           </h2>
         </div>
       </div>

@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Color Palette (extracted from original site) ── */
-  --color-teal:        #7a9e9f;
-  --color-teal-dark:   #5a7f80;
-  --color-teal-light:  #a8c5c6;
-  --color-cream:       #f4f0e8;
-  --color-cream-dark:  #ece6d9;
-  --color-sand:        #d3c9b8;
-  --color-sand-light:  #e8e0d2;
-  --color-charcoal:    #3d3530;
+  /* Color Palette (exact values from original site measured at 1440px) */
+  --color-teal:        #62929A;
+  --color-teal-dark:   #4A7A82;
+  --color-teal-light:  #8AABB2;
+  --color-cream:       #EFECE6;
+  --color-cream-dark:  #E5E0D8;
+  --color-sand:        #DDD7C6;
+  --color-sand-light:  #F7F5F0;
+  --color-charcoal:    #2C3A36;
   --color-brown:       #5c4f44;
   --color-brown-light: #7a6e63;
   --color-muted:       #8a8078;
   --color-white:       #ffffff;
-  --color-off-white:   #f7f4ef;
-  --color-blue-wash:   #e8eef6;
-  --color-footer-bg:   #f0ece4;
-  --color-footer-bar:  #8aabab;
+  --color-off-white:   #F7F5F0;
+  --color-cta-bg:      #EDE8DE;
+  --color-footer-bg:   #F7F5F0;
+  --color-footer-bar:  #62929A;
 
-  /* ── Font Families ── */
+  /* Font Families */
   --font-serif:  var(--font-cormorant), "Georgia", "Times New Roman", serif;
   --font-sans:   var(--font-mulish), system-ui, -apple-system, sans-serif;
   --font-script: var(--font-dancing), "Brush Script MT", cursive;
 }
 
-/* ── Base Styles ── */
+/* Base Styles */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -34,7 +34,7 @@
   body {
     font-family: var(--font-sans);
     color: var(--color-charcoal);
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

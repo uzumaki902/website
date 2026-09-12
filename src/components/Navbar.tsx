@@ -15,25 +15,25 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
-      <div className="max-w-[1400px] mx-auto px-8 md:px-12 flex items-center justify-between h-20 md:h-24">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#EFECE6]">
+      <div className="max-w-[1440px] mx-auto px-[80px] flex items-center justify-between h-[120px]">
         {/* Logo */}
         <a href="#home" className="flex flex-col leading-tight">
-          <span className="font-serif text-2xl md:text-[28px] font-light text-charcoal tracking-wide">
+          <span className="font-serif text-[34px] font-light text-[#2C3A36] tracking-wide">
             Conejo Valley
           </span>
-          <span className="font-sans text-[10px] md:text-xs text-teal tracking-[0.35em] uppercase">
+          <span className="font-sans text-[11px] text-[#62929A] tracking-[0.25em] uppercase">
             Family Counseling
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="font-sans text-[13px] font-normal text-charcoal hover:text-teal transition-colors tracking-[0.12em]"
+              className="font-sans text-[13px] font-normal text-[#2C3A36] hover:text-[#62929A] transition-colors tracking-[0.15em]"
             >
               {link.label}
             </a>
@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Oval contact button */}
           <a
             href="#contact"
-            className="border border-charcoal text-charcoal text-[13px] tracking-[0.12em] px-7 py-2.5 rounded-full hover:bg-charcoal hover:text-white transition-colors"
+            className="border border-[#2C3A36] text-[#2C3A36] text-[13px] tracking-[0.15em] px-7 py-3 rounded-[50px] hover:bg-[#2C3A36] hover:text-white transition-colors"
           >
             CONTACT
           </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-charcoal"
+          className="lg:hidden text-[#2C3A36]"
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -59,13 +59,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-sand/40 px-8 py-6 flex flex-col gap-5">
+        <div className="lg:hidden bg-[#EFECE6] border-t border-[#DDD7C6] px-8 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-sans text-sm text-charcoal hover:text-teal transition-colors tracking-[0.12em]"
+              className="font-sans text-sm text-[#2C3A36] hover:text-[#62929A] transition-colors tracking-[0.15em]"
             >
               {link.label}
             </a>
@@ -73,7 +73,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="border border-charcoal text-charcoal text-sm tracking-[0.12em] px-7 py-2.5 rounded-full text-center hover:bg-charcoal hover:text-white transition-colors w-fit"
+            className="border border-[#2C3A36] text-[#2C3A36] text-sm tracking-[0.15em] px-7 py-3 rounded-[50px] text-center hover:bg-[#2C3A36] hover:text-white transition-colors w-fit"
           >
             CONTACT
           </a>

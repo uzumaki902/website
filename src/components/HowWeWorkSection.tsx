@@ -3,24 +3,30 @@ import Link from "next/link";
 
 export default function HowWeWorkSection() {
   return (
-    <section className="relative bg-sand-light">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] min-h-[600px]">
-        {/* Left Text Content */}
-        <div className="px-8 md:px-16 lg:px-20 py-16 md:py-24">
-          <p className="font-sans text-xs tracking-[0.3em] uppercase text-teal mb-10">
+    <section className="relative bg-[#DDD7C6]">
+      <div
+        className="grid min-h-[660px]"
+        style={{ gridTemplateColumns: "1fr 360px" }}
+      >
+        {/* Left – Text Content */}
+        <div className="px-[80px] py-[120px]">
+          <p className="font-sans text-[12px] tracking-[0.3em] uppercase text-[#62929A] mb-10">
             HOW WE WORK
           </p>
-          <h2 className="font-serif text-3xl md:text-[44px] font-light text-charcoal leading-[1.15] mb-12 max-w-2xl">
+          <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-[1.15] mb-12 max-w-2xl">
             We&apos;re here to make a difference.
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl">
+          <div
+            className="grid gap-[48px] max-w-4xl"
+            style={{ gridTemplateColumns: "1fr 1fr" }}
+          >
             <div>
-              <p className="font-sans text-xs md:text-[13px] tracking-[0.15em] uppercase text-charcoal font-bold leading-[1.8] mb-5">
+              <p className="font-sans text-[13px] tracking-[0.15em] uppercase text-[#2C3A36] font-bold leading-[1.8] mb-5">
                 THE CLIENTS WE WORK WITH ARE BALANCING SO MANY THINGS AT ONCE,
                 IT&apos;S OFTEN HARD FOR THEM TO PUT THEMSELVES FIRST.
               </p>
-              <p className="font-sans text-sm md:text-[15px] text-brown-light leading-[1.9]">
+              <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.9]">
                 Here, your needs are always top priority. Our team takes the time
                 to deeply listen to our clients in order to truly understand their
                 story and their struggles. We recognize that no two people are the
@@ -31,7 +37,7 @@ export default function HowWeWorkSection() {
               </p>
             </div>
             <div>
-              <p className="font-sans text-sm md:text-[15px] text-brown-light leading-[1.9]">
+              <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.9]">
                 Sometimes we may gently challenge you to look at things differently
                 and other times we may explore your emotions, all while encouraging
                 you to practice what you&apos;ve learned in your daily life. We
@@ -44,16 +50,19 @@ export default function HowWeWorkSection() {
               </p>
             </div>
           </div>
-          
+
           <div className="mt-16">
-            <Link href="#" className="font-sans text-xs md:text-sm tracking-[0.15em] uppercase text-charcoal border-b border-charcoal pb-1 hover:text-teal hover:border-teal transition-colors">
+            <Link
+              href="#"
+              className="font-sans text-[12px] tracking-[0.18em] uppercase text-[#2C3A36] border-b border-[#2C3A36] pb-1 hover:text-[#62929A] hover:border-[#62929A] transition-colors"
+            >
               LEARN MORE ABOUT US
             </Link>
           </div>
         </div>
 
-        {/* Right Tall Image */}
-        <div className="relative min-h-[400px] lg:min-h-0">
+        {/* Right – Tall Image, flush to edge */}
+        <div className="relative min-h-full">
           <Image
             src="/images/woman-beach.jpg"
             alt="Woman twirling on beach at golden hour"
