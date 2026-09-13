@@ -36,7 +36,7 @@ export default function RealitySection() {
   };
 
   return (
-    <section className="bg-[#f7f5f1]">
+    <section className="bg-[#1E1D1C]">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:py-28 lg:px-12">
         {/* Left: copy */}
         <div className="mx-auto w-full max-w-xl">
@@ -46,7 +46,7 @@ export default function RealitySection() {
             viewport={{ once: true, amount: 0.6 }}
             custom={0}
             variants={fadeUp}
-            className="text-[11px] tracking-[0.2em] text-neutral-500"
+            className="text-[11px] tracking-[0.2em] text-[#8C857B]"
           >
             THE REALITY
           </motion.p>
@@ -57,7 +57,7 @@ export default function RealitySection() {
             viewport={{ once: true, amount: 0.4 }}
             custom={0.08}
             variants={fadeUp}
-            className="mt-4 font-serif text-[2.5rem] leading-[1.15] text-neutral-900 sm:text-[2.75rem]"
+            className="mt-4 font-serif text-[2.5rem] leading-[1.15] text-[#F9F8F6] sm:text-[2.75rem]"
           >
             You are used to being
             <br />
@@ -70,7 +70,7 @@ export default function RealitySection() {
             viewport={{ once: true, amount: 0.3 }}
             custom={0.18}
             variants={fadeUp}
-            className="mt-8 space-y-5 text-[15px] leading-relaxed text-neutral-600"
+            className="mt-8 space-y-5 text-[15px] leading-relaxed text-[#E5E2DC]"
           >
             <p>
               To everyone else, you have it all together. You meet the
@@ -96,7 +96,7 @@ export default function RealitySection() {
             viewport={{ once: true, amount: 0.8 }}
             custom={0.3}
             variants={fadeUp}
-            className="mt-10 inline-flex items-center gap-2 border-b border-neutral-800 pb-1 text-[12px] tracking-[0.15em] text-neutral-900 transition-opacity hover:opacity-60"
+            className="mt-10 inline-flex items-center gap-2 border-b border-[#E5E2DC] pb-1 text-[12px] tracking-[0.15em] text-[#F9F8F6] transition-colors hover:text-[#C25E30] hover:border-[#C25E30]"
           >
             LEARN ABOUT MY APPROACH
             <span aria-hidden="true">&rarr;</span>
@@ -108,7 +108,7 @@ export default function RealitySection() {
           {/* Offset panel, peeking out from behind the photo */}
           <div
             aria-hidden="true"
-            className="absolute -inset-x-6 top-6 bottom-6 -z-10 bg-[#e7e2d8] sm:-inset-x-8 lg:top-10 lg:bottom-10 lg:-right-10 lg:-left-2"
+            className="absolute -inset-x-6 top-6 bottom-6 -z-10 bg-[#2A2522] sm:-inset-x-8 lg:top-10 lg:bottom-10 lg:-right-10 lg:-left-2"
           />
 
           <motion.div
