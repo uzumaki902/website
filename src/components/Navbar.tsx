@@ -28,12 +28,12 @@ export default function Navbar() {
     visible: { 
       opacity: 1, 
       x: 0,
-      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }
     },
     exit: {
       opacity: 0,
       x: shouldReduceMotion ? 0 : "100%",
-      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as any }
     }
   };
 
@@ -50,7 +50,7 @@ export default function Navbar() {
       <motion.div 
         className="px-6 md:px-10 lg:px-[80px] flex items-center justify-between"
         animate={{ height: scrolled ? 80 : 120 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" as any }}
       >
         {/* Logo */}
         <a href="#home" className="flex flex-col leading-tight group">

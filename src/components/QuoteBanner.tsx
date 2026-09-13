@@ -11,7 +11,7 @@ export default function QuoteBanner() {
       backgroundColor: "rgba(30, 29, 28, 1)",
       transition: { 
         duration: 1.2, 
-        ease: "easeInOut",
+        ease: "easeInOut" as any,
         when: "beforeChildren",
         staggerChildren: 0.3
       }
@@ -23,7 +23,7 @@ export default function QuoteBanner() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { duration: 0.8, ease: "easeOut" as any } 
     }
   };
 
@@ -31,7 +31,7 @@ export default function QuoteBanner() {
     hidden: { scaleX: 0 },
     visible: { 
       scaleX: 1, 
-      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] } 
+      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] as any } 
     }
   };
 
