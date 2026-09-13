@@ -1,155 +1,117 @@
-"use client";
-
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
 
-export default function HeroSection() {
-  const shouldReduceMotion = useReducedMotion();
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] },
-    },
-  };
-
-  const textRevealVariants = {
-    hidden: { y: "100%" },
-    visible: {
-      y: 0,
-      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] },
-    },
-  };
-
-  const imageRevealVariants = {
-    hidden: { clipPath: "inset(100% 0 0 0)" },
-    visible: {
-      clipPath: "inset(0% 0 0 0)",
-      transition: { duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] },
-    },
-  };
-
-  // If reduced motion is preferred, use a simple fade instead of clip/translate
-  const reducedMotionFallback = shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.5 } } } : null;
-
+export default function Hero() {
   return (
-    <section id="home" className="pt-[80px] md:pt-[100px] lg:pt-[120px] bg-[#F9F8F6]">
-      {/* Mobile/Tablet Layout (Below lg) */}
-      <div className="lg:hidden">
-        <motion.div 
-          className="px-6 md:px-10 py-16 md:py-24"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="font-serif text-[42px] md:text-[56px] leading-[1.1] text-[#1E1D1C] mb-6 flex flex-col gap-1">
-            <div className="overflow-hidden">
-              <motion.div variants={reducedMotionFallback || textRevealVariants}>YOU LOOK LIKE</motion.div>
-            </div>
-            <div className="overflow-hidden">
-              <motion.div variants={reducedMotionFallback || textRevealVariants}>YOU&apos;RE DOING FINE.</motion.div>
-            </div>
-          </div>
-          <motion.p variants={itemVariants} className="font-sans text-[12px] md:text-[14px] text-[#8C857B] tracking-[0.15em] uppercase max-w-sm">
-            For high-achieving adults ready to move beyond simply keeping up.
-          </motion.p>
-          <motion.div variants={itemVariants} className="mt-10">
-            <a
-              href="#contact"
-              className="inline-block border border-[#1E1D1C] text-[#1E1D1C] text-[12px] tracking-[0.15em] px-8 py-4 rounded-[2px] hover:bg-[#1E1D1C] hover:text-[#F9F8F6] transition-colors uppercase"
-            >
-              Schedule a Consultation
-            </a>
-          </motion.div>
-        </motion.div>
-        
-        <motion.div 
-          className="relative w-full h-[60vh] md:h-[70vh]"
-          variants={reducedMotionFallback || imageRevealVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-            alt="Abstract light through a concrete corridor"
-            fill
-            className="object-cover"
-            priority
-          />
-        </motion.div>
-        <div className="h-8 bg-[#C25E30] w-full" />
-      </div>
+    <div className="bg-[#f7f5f2]">
+      {/* ---------- Header ---------- */}
+      <header className="flex items-center justify-between px-10 py-6">
+        <div>
+          <h1 className="font-serif text-2xl tracking-wide text-neutral-900">
+            MAYA REYNOLDS
+          </h1>
+          <p className="mt-1 text-[11px] tracking-[0.2em] text-neutral-500">
+            LICENSED CLINICAL PSYCHOLOGIST
+          </p>
+        </div>
 
-      {/* Desktop Layout (lg and above) */}
-      <div className="hidden lg:grid grid-cols-12 min-h-[700px] xl:min-h-[800px]">
-        {/* Left Image - 5 columns */}
-        <div className="col-span-5 relative h-full bg-[#E5E2DC] p-12 pb-0">
-           <motion.div 
-             className="relative w-full h-full"
-             variants={reducedMotionFallback || imageRevealVariants}
-             initial="hidden"
-             animate="visible"
-           >
+        <nav className="flex items-center gap-10">
+          <ul className="flex items-center gap-8 text-[12px] tracking-[0.15em] text-neutral-800">
+            <li className="cursor-pointer hover:text-neutral-500">ABOUT</li>
+            <li className="cursor-pointer hover:text-neutral-500">SPECIALTIES</li>
+            <li className="cursor-pointer hover:text-neutral-500">APPROACH</li>
+            <li className="cursor-pointer hover:text-neutral-500">FAQS</li>
+          </ul>
+          <button className="border border-neutral-800 px-6 py-3 text-[12px] tracking-[0.15em] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-colors">
+            CONTACT
+          </button>
+        </nav>
+      </header>
+
+      {/* ---------- Hero ---------- */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 items-center px-10 pb-10">
+        {/* Left: text content */}
+        <div className="max-w-xl">
+          <div className="mb-6">
+            <span className="block h-[2px] w-8 bg-orange-700 mb-3" />
+            <p className="text-[12px] tracking-[0.15em] text-neutral-500 leading-relaxed">
+              IT LOOKS DIFFERENT
+              <br />
+              ON THE INSIDE.
+            </p>
+          </div>
+
+          <h2 className="font-serif text-6xl leading-[1.1] text-neutral-900">
+            YOU LOOK LIKE
+            <br />
+            YOU&apos;RE DOING FINE.
+            <br />
+            <span className="text-orange-700">ARE YOU?</span>
+          </h2>
+
+          <p className="mt-8 text-[13px] tracking-[0.08em] text-neutral-500 leading-relaxed max-w-md">
+            FOR HIGH-ACHIEVING ADULTS READY TO MOVE
+            <br />
+            BEYOND SIMPLY KEEPING UP.
+          </p>
+
+          <button className="mt-10 flex items-center gap-3 border border-neutral-800 px-7 py-4 text-[12px] tracking-[0.15em] text-neutral-900 hover:bg-neutral-900 hover:text-white transition-colors">
+            SCHEDULE A CONSULTATION
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        {/* Right: split image */}
+        <div className="relative mt-12 lg:mt-0 h-[500px] lg:h-[700px] w-full grid grid-cols-2">
+          {/* Left photo: crowd */}
+          <div className="relative h-full w-full overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="Abstract light through a concrete corridor"
+              src="/images/crowd-hero.jpg"
+              alt="Person in a crowd"
               fill
               className="object-cover"
               priority
             />
-          </motion.div>
-        </div>
-
-        {/* Center Content - 6 columns */}
-        <motion.div 
-          className="col-span-6 flex flex-col justify-center px-16 xl:px-24 h-full relative z-10"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="font-serif text-[64px] xl:text-[80px] leading-[1.05] text-[#1E1D1C] mb-8 flex flex-col gap-2">
-            <div className="overflow-hidden py-1">
-              <motion.div variants={reducedMotionFallback || textRevealVariants}>YOU LOOK LIKE</motion.div>
-            </div>
-            <div className="overflow-hidden py-1">
-              <motion.div variants={reducedMotionFallback || textRevealVariants}>YOU&apos;RE DOING FINE.</motion.div>
+            <div className="absolute bottom-10 left-6 flex items-start gap-3">
+              <span className="block h-14 w-[2px] bg-white/70" />
+              <p className="text-[11px] tracking-[0.1em] text-white leading-relaxed max-w-[110px]">
+                HIGH FUNCTIONING DOESN&apos;T ALWAYS MEAN DOING WELL.
+              </p>
             </div>
           </div>
-          <motion.p variants={itemVariants} className="font-sans text-[13px] text-[#8C857B] tracking-[0.2em] uppercase max-w-md">
-            For high-achieving adults ready to move beyond simply keeping up.
-          </motion.p>
-          <motion.div variants={itemVariants} className="mt-16">
-            <a
-              href="#contact"
-              className="inline-block border border-[#1E1D1C] text-[#1E1D1C] text-[13px] tracking-[0.15em] px-10 py-4 rounded-[2px] hover:bg-[#1E1D1C] hover:text-[#F9F8F6] transition-colors uppercase group relative overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center transition-transform duration-200 group-hover:translate-x-1">
-                SCHEDULE A CONSULTATION &nbsp;
-                <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
-              </span>
-            </a>
-          </motion.div>
-        </motion.div>
 
-        {/* Right Accent - 1 column */}
-        <motion.div 
-          className="col-span-1 bg-[#C25E30] h-full"
-          initial={{ scaleY: 0, transformOrigin: "bottom" }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98], delay: 0.4 }}
-        />
-      </div>
-    </section>
+          {/* Right photo: Maya Reynolds */}
+          <div className="relative h-full w-full overflow-hidden">
+            <Image
+              src="/images/maya-reynolds.jpg"
+              alt="Dr. Maya Reynolds"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute top-8 right-6 text-right">
+              <p className="text-[11px] tracking-[0.1em] text-white font-medium">
+                DR. MAYA REYNOLDS, PSYD
+              </p>
+              <p className="mt-1 text-[11px] tracking-[0.1em] text-white/80 leading-relaxed">
+                LICENSED CLINICAL
+                <br />
+                PSYCHOLOGIST
+              </p>
+            </div>
+
+            <div className="absolute bottom-10 right-6 flex items-start gap-3">
+              <span className="block h-14 w-[2px] bg-black/70" />
+              <p className="text-[11px] tracking-[0.1em] text-black leading-relaxed">
+                CLARITY
+                <br />
+                PERSPECTIVE
+                <br />
+                LASTING CHANGE
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
