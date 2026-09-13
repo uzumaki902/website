@@ -70,7 +70,7 @@ export default function HowWeWork() {
         {/* Left: photo + pull quote */}
         <div className="mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
           <motion.div
-            initial="hidden"
+            initial="show"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
             variants={imageReveal}
