@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home" className="flex flex-col leading-tight">
           <span className="font-serif text-[24px] md:text-[28px] lg:text-[34px] font-normal text-[#1E1D1C] tracking-wide">
-            Dr. Maya Reynolds, PsyD
+            MAYA REYNOLDS
           </span>
           <span className="font-sans text-[9px] md:text-[10px] lg:text-[11px] text-[#8C857B] tracking-[0.25em] uppercase">
             Licensed Clinical Psychologist
