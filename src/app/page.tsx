@@ -7,6 +7,7 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import HonoringSection from "@/components/HonoringSection";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
+import OfficeSection from "@/components/OfficeSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <HowWeWorkSection />
         <HonoringSection />
         <SpecialtiesSection />
+      <OfficeSection />
         <CtaSection />
       </main>
       <Footer />
