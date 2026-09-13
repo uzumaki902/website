@@ -62,7 +62,7 @@ export default function HeroSection() {
             </div>
           </div>
           <motion.p variants={itemVariants} className="font-sans text-[12px] md:text-[14px] text-[#8C857B] tracking-[0.15em] uppercase max-w-sm">
-            Therapy for high-achieving adults in Santa Monica, California and online.
+            For high-achieving adults ready to move beyond simply keeping up.
           </motion.p>
           <motion.div variants={itemVariants} className="mt-10">
             <a
@@ -127,7 +127,7 @@ export default function HeroSection() {
             </div>
           </div>
           <motion.p variants={itemVariants} className="font-sans text-[13px] text-[#8C857B] tracking-[0.2em] uppercase max-w-md">
-            Therapy for high-achieving adults in Santa Monica, California and online.
+            For high-achieving adults ready to move beyond simply keeping up.
           </motion.p>
           <motion.div variants={itemVariants} className="mt-16">
             <a
