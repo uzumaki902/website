@@ -1,123 +1,68 @@
-const teamMembers = [
-  "Jennifer Anderson",
-  "Heather Williams-Baumgart",
-  "Autumn Bodily",
-  "Michaela Gorospe",
-  "Candace Bletscher",
-  "Samantha Johnson",
-  "Andrea Watkins",
-  "Rosa Gomez",
-  "Chad Flores",
-];
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact", href: "#contact" },
-];
-
 export default function Footer() {
   return (
-    <footer className="w-full">
-      {/* Main Footer */}
-      <div className="bg-[#F7F5F0] py-12 md:py-16 lg:py-[80px] px-6 md:px-10 lg:px-[80px]">
-        <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Brand – full width on mobile */}
-          <div className="col-span-2 md:col-span-2 lg:col-span-1">
-            <p className="font-serif text-[28px] md:text-[32px] lg:text-[34px] font-light text-[#2C3A36] mb-1">
-              Conejo Valley
-            </p>
-            <p className="font-sans text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-[#62929A] mb-5">
-              FAMILY COUNSELING
-            </p>
-            <p className="font-sans text-[14px] text-[#7A6E63] leading-[1.8] max-w-xs">
-              We want to make getting started simple. You&apos;re welcome to come into our office in
-              Newbury Park or schedule virtual appointments from anywhere in CA — whatever works best
-              for you.
+    <footer className="bg-[#1E1D1C] text-[#F9F8F6] pt-[80px] lg:pt-[100px] border-t border-[#3A3632]">
+      <div className="px-6 md:px-10 lg:px-[80px] pb-[60px] max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          
+          {/* Column 1: Brand */}
+          <div className="flex flex-col">
+            <span className="font-serif text-[24px] mb-2 leading-tight">
+              Dr. Maya Reynolds
+            </span>
+            <span className="font-sans text-[10px] text-[#8C857B] tracking-[0.2em] uppercase mb-6">
+              PsyD, Licensed Clinical Psychologist
+            </span>
+            <p className="font-sans text-[13px] text-[#8C857B] leading-relaxed max-w-[250px]">
+              Evidence-based, depth-oriented therapy for high-achieving adults in California.
             </p>
           </div>
 
-          {/* Navigate */}
-          <div>
-            <h4 className="font-sans text-[12px] font-semibold tracking-[0.25em] uppercase text-[#2C3A36] mb-5">
-              NAVIGATE
-            </h4>
-            <ul className="flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="font-sans text-[14px] text-[#7A6E63] hover:text-[#62929A] transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Column 2: Navigation */}
+          <div className="flex flex-col space-y-4">
+            <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-[#F9F8F6] mb-2">Navigation</h4>
+            <a href="#about" className="font-sans text-[13px] text-[#8C857B] hover:text-[#C25E30] transition-colors">About</a>
+            <a href="#specialties" className="font-sans text-[13px] text-[#8C857B] hover:text-[#C25E30] transition-colors">Specialties</a>
+            <a href="#approach" className="font-sans text-[13px] text-[#8C857B] hover:text-[#C25E30] transition-colors">Approach</a>
+            <a href="#faqs" className="font-sans text-[13px] text-[#8C857B] hover:text-[#C25E30] transition-colors">FAQs</a>
           </div>
 
-          {/* Our Team */}
-          <div>
-            <h4 className="font-sans text-[12px] font-semibold tracking-[0.25em] uppercase text-[#2C3A36] mb-5">
-              OUR TEAM
-            </h4>
-            <ul className="flex flex-col gap-3">
-              {teamMembers.map((name) => (
-                <li key={name}>
-                  <a
-                    href="#team"
-                    className="font-sans text-[14px] text-[#7A6E63] hover:text-[#62929A] transition-colors"
-                  >
-                    {name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Column 3: Contact */}
+          <div className="flex flex-col space-y-4">
+            <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-[#F9F8F6] mb-2">Contact</h4>
+            <a href="tel:+13105550198" className="font-sans text-[13px] text-[#8C857B] hover:text-[#C25E30] transition-colors">
+              (310) 555-0198
+            </a>
+            <a href="mailto:contact@mayareynolds.com" className="font-sans text-[13px] text-[#8C857B] hover:text-[#C25E30] transition-colors">
+              contact@mayareynolds.com
+            </a>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-sans text-[12px] font-semibold tracking-[0.25em] uppercase text-[#2C3A36] mb-5">
-              CONTACT
-            </h4>
-            <div className="font-sans text-[14px] text-[#7A6E63] leading-[1.8] flex flex-col gap-1">
-              <p>925 Broadbeck Dr</p>
-              <p>Suites 200 and 225</p>
-              <p>Newbury Park, CA 91320</p>
-              <p className="mt-2">
-                <a
-                  href="mailto:info@conejovalleycounseling.com"
-                  className="hover:text-[#62929A] transition-colors break-words"
-                >
-                  info@conejovalleycounseling.com
-                </a>
-              </p>
-              <p>
-                <a href="tel:+18052423120" className="hover:text-[#62929A] transition-colors">
-                  805.242.3120
-                </a>
-              </p>
-              <p className="mt-4 text-[13px] leading-[1.8] italic">
-                Serving Thousand Oaks, Westlake Village, Camarillo, Moorpark, &amp; Simi Valley
-              </p>
-            </div>
+          {/* Column 4: Location */}
+          <div className="flex flex-col space-y-4">
+            <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-[#F9F8F6] mb-2">Location</h4>
+            <p className="font-sans text-[13px] text-[#8C857B] leading-relaxed">
+              1234 4th Street<br />
+              Suite 45W<br />
+              Santa Monica, CA 90401
+            </p>
+            <p className="font-sans text-[13px] text-[#8C857B] mt-2 italic">
+              Offering both in-person and secure telehealth sessions throughout California.
+            </p>
           </div>
+
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-[#62929A] py-4 px-6 md:px-10 lg:px-[80px]">
-        <div className="max-w-[1280px] mx-auto flex items-center justify-center flex-wrap gap-2">
-          <p className="font-sans text-[12px] md:text-[13px] text-white/90 text-center">
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            {" | "}
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            {" | "}
-            <a href="#" className="hover:text-white transition-colors">Disclaimer</a>
-            {" | "}
-            <span>Website by Walker Strategy Co.</span>
+      <div className="bg-[#C25E30] py-4">
+        <div className="px-6 md:px-10 lg:px-[80px] max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center text-[#F9F8F6]">
+          <p className="font-sans text-[11px] tracking-wider mb-2 md:mb-0">
+            &copy; {new Date().getFullYear()} Dr. Maya Reynolds, PsyD. All Rights Reserved.
           </p>
+          <div className="flex space-x-6">
+            <a href="#" className="font-sans text-[11px] tracking-wider hover:opacity-75 transition-opacity">Privacy Policy</a>
+            <a href="#" className="font-sans text-[11px] tracking-wider hover:opacity-75 transition-opacity">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>

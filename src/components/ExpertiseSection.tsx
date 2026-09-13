@@ -1,76 +1,32 @@
-const expertiseLeft = [
-  "DISSOCIATION",
-  "TRAUMA",
-  "FAMILY CONFLICT",
-  "SPECIAL NEEDS PARENTING",
-  "DEPRESSION",
-  "MARRIAGE",
-];
-
-const expertiseRight = [
-  "ANXIETY",
-  "RELATIONSHIPS",
-  "CHILDREN",
-  "TEENS",
-  "INTIMACY & CONNECTION",
-  "...AND MORE.",
-];
-
 export default function ExpertiseSection() {
+  const methods = [
+    "Cognitive Behavioral Therapy (CBT)",
+    "Eye Movement Desensitization and Reprocessing (EMDR)",
+    "Mindfulness-Based Stress Reduction",
+    "Somatic and Body-Oriented Therapies",
+    "Psychodynamic Therapy",
+    "Depth-Oriented Processing"
+  ];
+
   return (
-    <section id="specialties" className="bg-[#F7F5F0] py-14 md:py-20 lg:py-[120px] px-6 md:px-10 lg:px-[80px]">
-      <div className="max-w-[1280px] mx-auto">
+    <section id="approach" className="py-[120px] lg:py-[160px] bg-[#F9F8F6]">
+      <div className="px-6 md:px-10 lg:px-[80px] max-w-[1200px] mx-auto">
+        <h2 className="font-sans text-[11px] text-[#8C857B] tracking-[0.25em] uppercase mb-4 text-center">
+          Clinical Approach
+        </h2>
+        <h3 className="font-serif text-[42px] md:text-[56px] text-[#1E1D1C] leading-none mb-16 text-center">
+          Evidence-Based Methods
+        </h3>
 
-        {/* ── MOBILE / TABLET: stacked single column ── */}
-        <div className="lg:hidden">
-          <h2 className="font-serif text-[32px] md:text-[38px] font-light text-[#2C3A36] leading-tight mb-10">
-            Our areas of{" "}
-            <span className="font-script text-[#62929A] italic text-[40px] md:text-[48px] inline-block ml-1">
-              expertise
-            </span>
-          </h2>
-          <div className="flex flex-col">
-            {[...expertiseLeft, ...expertiseRight].map((item) => (
-              <div key={item} className="py-4 border-b border-[#E0D9CC]">
-                <span className="font-sans text-[13px] tracking-[0.22em] uppercase text-[#7A6E63] font-medium">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* ── DESKTOP: 3-column grid ── */}
-        <div
-          className="hidden lg:grid gap-16 items-start"
-          style={{ gridTemplateColumns: "320px 1fr 1fr" }}
-        >
-          <div className="pt-2">
-            <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-tight">
-              Our areas of{" "}
-              <span className="font-script text-[#62929A] italic text-[52px] inline-block ml-1">
-                expertise
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 border-t border-[#E5E2DC]">
+          {methods.map((method, index) => (
+            <div key={index} className="py-6 border-b border-[#E5E2DC] flex items-center justify-between">
+              <span className="font-sans text-[15px] text-[#3A3632] tracking-wide">
+                {method}
               </span>
-            </h2>
-          </div>
-          <div className="flex flex-col">
-            {expertiseLeft.map((item) => (
-              <div key={item} className="py-5 border-b border-[#E0D9CC]">
-                <span className="font-sans text-[13px] tracking-[0.22em] uppercase text-[#7A6E63] font-medium">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col">
-            {expertiseRight.map((item) => (
-              <div key={item} className="py-5 border-b border-[#E0D9CC]">
-                <span className="font-sans text-[13px] tracking-[0.22em] uppercase text-[#7A6E63] font-medium">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
+              <span className="text-[#C25E30] text-[18px]">&rarr;</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

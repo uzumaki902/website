@@ -1,58 +1,47 @@
-import Image from "next/image";
-
-const cards = [
-  {
-    image: "/images/adults.jpg",
-    alt: "Two women sitting on a beach looking at the ocean",
-    title: "Adults",
-    description:
-      "Feeling stuck or overwhelmed? We help adults find clarity, build resilience, and move forward with confidence by addressing the root causes of anxiety, stress, and emotional pain.",
-  },
-  {
-    image: "/images/couples.jpg",
-    alt: "Couple embracing on the beach",
-    title: "Couples",
-    description:
-      "Relationships require effort, and we're here to help you strengthen yours. We guide couples through challenges like communication breakdowns and trust issues, helping you rebuild intimacy and strengthen your relationship.",
-  },
-  {
-    image: "/images/children.jpg",
-    alt: "Children playing in the ocean waves",
-    title: "Children & Teens",
-    description:
-      "Kids need support, too. We help them process big emotions, cope with challenging family situations, build coping skills, and feel understood, while also working closely with their parents to create a nurturing environment.",
-  },
-];
-
 export default function WhoWeHelpSection() {
-  return (
-    <section className="bg-[#F7F5F0] py-14 md:py-20 lg:py-[120px] px-6 md:px-10 lg:px-[80px]">
-      <div className="max-w-[1280px] mx-auto">
-        {/* Section Heading */}
-        <h2 className="font-serif text-[36px] md:text-[40px] lg:text-[46px] font-light text-[#2C3A36] mb-10 md:mb-14 lg:mb-16">
-          Who we{" "}
-          <span className="font-script text-[#62929A] italic text-[44px] md:text-[50px] lg:text-[56px] inline-block ml-1">
-            help
-          </span>
-        </h2>
+  const issues = [
+    {
+      number: "01",
+      title: "ANXIETY & PANIC",
+      description: "Constantly bracing for something to go wrong. The tension in your body, the inability to sleep, the mind that won't turn off even when everything is objectively fine."
+    },
+    {
+      number: "02",
+      title: "TRAUMA & EMDR",
+      description: "Understanding what your past is still asking of you. Addressing single-incident events or complex, long-standing patterns that keep you feeling unsafe or disconnected."
+    },
+    {
+      number: "03",
+      title: "BURNOUT & PERFECTIONISM",
+      description: "When achievement stops feeling like enough. For professionals, entrepreneurs, and creatives who have pushed through stress for so long they no longer recognize themselves."
+    }
+  ];
 
-        {/* 1 col on mobile/tablet, 3 col on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
-          {cards.map((card) => (
-            <div key={card.title} className="flex flex-col">
-              <div className="relative aspect-square w-full mb-5 overflow-hidden">
-                <Image
-                  src={card.image}
-                  alt={card.alt}
-                  fill
-                  className="object-cover object-center"
-                />
-              </div>
-              <h3 className="font-serif text-[26px] md:text-[28px] font-light text-[#2C3A36] mb-3">
-                {card.title}
-              </h3>
-              <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.7]">
-                {card.description}
+  return (
+    <section id="specialties" className="py-[120px] lg:py-[160px] bg-[#F9F8F6]">
+      <div className="px-6 md:px-10 lg:px-[80px] max-w-[1600px] mx-auto">
+        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:justify-between md:items-end border-b border-[#E5E2DC] pb-8">
+          <div>
+            <h2 className="font-sans text-[11px] text-[#8C857B] tracking-[0.25em] uppercase mb-4">
+              What Brings People Here
+            </h2>
+            <h3 className="font-serif text-[42px] md:text-[56px] text-[#1E1D1C] leading-none">
+              Areas of Focus
+            </h3>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
+          {issues.map((issue) => (
+            <div key={issue.number} className="flex flex-col border-t border-[#E5E2DC] pt-8 md:border-t-0 md:pt-0">
+              <span className="font-sans text-[14px] text-[#8C857B] tracking-widest mb-6 block">
+                {issue.number}
+              </span>
+              <h4 className="font-serif text-[28px] text-[#1E1D1C] mb-4">
+                {issue.title}
+              </h4>
+              <p className="font-sans text-[15px] text-[#3A3632] leading-relaxed">
+                {issue.description}
               </p>
             </div>
           ))}

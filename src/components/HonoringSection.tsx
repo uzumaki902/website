@@ -2,52 +2,44 @@ import Image from "next/image";
 
 export default function HonoringSection() {
   return (
-    <section className="bg-[#F7F5F0] overflow-hidden p-0 m-0">
+    <section className="py-[120px] lg:py-[160px] bg-[#F9F8F6]">
+      <div className="px-6 md:px-10 lg:px-[80px] max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          
+          {/* Left Image - 5 columns */}
+          <div className="lg:col-span-5 relative">
+            <div className="aspect-[3/4] relative w-full">
+              <Image
+                src="https://images.unsplash.com/photo-1541888045610-18e4726e632b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Architectural doorway leading toward light"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
+          </div>
 
-      {/* ── MOBILE / TABLET: image first, then text ── */}
-      <div className="lg:hidden">
-        <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
-          <Image
-            src="/images/honoring-family.png"
-            alt="Family of four standing in shallow ocean water looking out at the sea"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        <div className="px-6 md:px-10 py-12 md:py-16">
-          <h2 className="font-serif text-[30px] md:text-[38px] font-light text-[#2C3A36] leading-[1.25]">
-            Honoring where you&apos;ve been{" "}
-            <span className="font-script text-[#62929A] italic text-[38px] md:text-[46px] inline-block mx-1">
-              &amp;
-            </span>{" "}
-            helping shape where you&apos;re headed.
-          </h2>
-        </div>
-      </div>
-
-      {/* ── DESKTOP: 2-column 50/50 grid ── */}
-      <div
-        className="hidden lg:grid min-h-[620px]"
-        style={{ gridTemplateColumns: "1fr 1fr" }}
-      >
-        {/* Left – Full-bleed Image, flush to left edge */}
-        <div className="relative w-full min-h-[620px] overflow-hidden">
-          <Image
-            src="/images/honoring-family.png"
-            alt="Family of four standing in shallow ocean water looking out at the sea"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        {/* Right – Statement Heading */}
-        <div className="flex flex-col justify-center px-[80px] py-[120px] bg-[#F7F5F0]">
-          <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-[1.25] max-w-lg">
-            Honoring where you&apos;ve been{" "}
-            <span className="font-script text-[#62929A] italic text-[52px] inline-block mx-1">
-              &amp;
-            </span>{" "}
-            helping shape where you&apos;re headed.
-          </h2>
+          {/* Text Content - 6 columns */}
+          <div className="lg:col-span-6 lg:col-start-7">
+            <h2 className="font-sans text-[11px] text-[#8C857B] tracking-[0.25em] uppercase mb-6">
+              The Work
+            </h2>
+            <h3 className="font-serif text-[42px] md:text-[52px] leading-[1.1] text-[#1E1D1C] mb-8">
+              Paced, Structured Healing
+            </h3>
+            <div className="space-y-6 font-sans text-[15px] md:text-[17px] text-[#3A3632] leading-relaxed">
+              <p>
+                Many high achievers avoid therapy because they fear it will be a chaotic unpacking of the past that leaves them unable to function in the present.
+              </p>
+              <p>
+                The work we do is different. It is highly structured and carefully paced. We begin with stabilization—building practical tools to regulate your nervous system so you can feel grounded right now.
+              </p>
+              <p>
+                Only when you feel secure do we move into deeper, depth-oriented processing. You remain in control of the pace at all times.
+              </p>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>

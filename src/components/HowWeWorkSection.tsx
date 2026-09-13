@@ -1,108 +1,46 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function HowWeWorkSection() {
   return (
-    <section className="relative bg-[#DDD7C6]">
-
-      {/* ── MOBILE / TABLET: text first, then image ── */}
-      <div className="lg:hidden px-6 md:px-10 py-14 md:py-20">
-        <p className="font-sans text-[11px] tracking-[0.3em] uppercase text-[#62929A] mb-6">
-          HOW WE WORK
-        </p>
-        <h2 className="font-serif text-[32px] md:text-[38px] font-light text-[#2C3A36] leading-[1.15] mb-8">
-          We&apos;re here to make a difference.
-        </h2>
-        <p className="font-sans text-[12px] tracking-[0.15em] uppercase text-[#2C3A36] font-bold leading-[1.8] mb-4">
-          THE CLIENTS WE WORK WITH ARE BALANCING SO MANY THINGS AT ONCE,
-          IT&apos;S OFTEN HARD FOR THEM TO PUT THEMSELVES FIRST.
-        </p>
-        <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.9] mb-6">
-          Here, your needs are always top priority. Our team takes the time to deeply listen to our
-          clients in order to truly understand their story and their struggles. We recognize that no
-          two people are the same and that personalized therapy means an intentional, tailored
-          approach. (You won&apos;t find anything &ldquo;one-size-fits-all&rdquo; here.) If
-          you&apos;re ready to do the work, we&apos;re ready to help.
-        </p>
-        <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.9] mb-8">
-          Sometimes we may gently challenge you to look at things differently and other times we may
-          explore your emotions, all while encouraging you to practice what you&apos;ve learned in
-          your daily life. We take what we do seriously because we know how important it is for you
-          to heal from what&apos;s hurting you, discover a fulfilling life, and build meaningful
-          relationships. Our goal is to walk alongside you in this journey, offering support and
-          guidance as you uncover your strengths and embrace what the future can hold for you.
-        </p>
-        <Link
-          href="#"
-          className="font-sans text-[12px] tracking-[0.18em] uppercase text-[#2C3A36] border-b border-[#2C3A36] pb-1 hover:text-[#62929A] hover:border-[#62929A] transition-colors mb-10 inline-block"
-        >
-          LEARN MORE ABOUT US
-        </Link>
-        {/* Image below text on mobile */}
-        <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden mt-8">
-          <Image
-            src="/images/woman-beach.jpg"
-            alt="Woman twirling on beach at golden hour"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-      </div>
-
-      {/* ── DESKTOP: 2-column grid ── */}
-      <div
-        className="hidden lg:grid min-h-[660px]"
-        style={{ gridTemplateColumns: "1fr 360px" }}
-      >
-        <div className="px-[80px] py-[120px]">
-          <p className="font-sans text-[12px] tracking-[0.3em] uppercase text-[#62929A] mb-10">
-            HOW WE WORK
-          </p>
-          <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-[1.15] mb-12 max-w-2xl">
-            We&apos;re here to make a difference.
-          </h2>
-          <div className="grid gap-[48px] max-w-4xl" style={{ gridTemplateColumns: "1fr 1fr" }}>
-            <div>
-              <p className="font-sans text-[13px] tracking-[0.15em] uppercase text-[#2C3A36] font-bold leading-[1.8] mb-5">
-                THE CLIENTS WE WORK WITH ARE BALANCING SO MANY THINGS AT ONCE,
-                IT&apos;S OFTEN HARD FOR THEM TO PUT THEMSELVES FIRST.
-              </p>
-              <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.9]">
-                Here, your needs are always top priority. Our team takes the time to deeply listen to
-                our clients in order to truly understand their story and their struggles. We recognize
-                that no two people are the same and that personalized therapy means an intentional,
-                tailored approach. (You won&apos;t find anything &ldquo;one-size-fits-all&rdquo;
-                here.) If you&apos;re ready to do the work, we&apos;re ready to help.
-              </p>
+    <section className="py-[120px] lg:py-[160px] bg-[#1E1D1C]">
+      <div className="px-6 md:px-10 lg:px-[80px] max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          
+          {/* Portrait - 5 columns */}
+          <div className="lg:col-span-5 relative">
+            <div className="aspect-[3/4] relative w-full">
+              <Image
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Portrait of Dr. Maya Reynolds"
+                fill
+                className="object-cover grayscale"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 border border-[#F9F8F6] translate-x-4 -translate-y-4 md:translate-x-6 md:-translate-y-6 pointer-events-none"></div>
             </div>
-            <div>
-              <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.9]">
-                Sometimes we may gently challenge you to look at things differently and other times
-                we may explore your emotions, all while encouraging you to practice what
-                you&apos;ve learned in your daily life. We take what we do seriously because we know
-                how important it is for you to heal from what&apos;s hurting you, discover a
-                fulfilling life, and build meaningful relationships. Our goal is to walk alongside
-                you in this journey, offering support and guidance as you uncover your strengths and
-                embrace what the future can hold for you.
+          </div>
+
+          {/* Text Content - 6 columns */}
+          <div className="lg:col-span-6 lg:col-start-7">
+            <h2 className="font-sans text-[11px] text-[#8C857B] tracking-[0.25em] uppercase mb-6">
+              Clinical Authority
+            </h2>
+            <h3 className="font-serif text-[42px] md:text-[52px] leading-[1.1] text-[#F9F8F6] mb-8">
+              Dr. Maya Reynolds, PsyD
+            </h3>
+            <div className="space-y-6 font-sans text-[15px] md:text-[17px] text-[#E5E2DC] leading-relaxed">
+              <p>
+                As a Licensed Clinical Psychologist based in Santa Monica, I work exclusively with high-achieving adults navigating the space between external success and internal exhaustion.
+              </p>
+              <p>
+                Therapy with me is not passive listening. It is an intelligent, structured process designed to respect your time and capacity. We utilize evidence-based modalities—including EMDR, cognitive-behavioral, and somatic approaches—to untangle what is no longer serving you.
+              </p>
+              <p>
+                My goal is to help you build the internal regulation required not just to perform, but to actually thrive.
               </p>
             </div>
           </div>
-          <div className="mt-16">
-            <Link
-              href="#"
-              className="font-sans text-[12px] tracking-[0.18em] uppercase text-[#2C3A36] border-b border-[#2C3A36] pb-1 hover:text-[#62929A] hover:border-[#62929A] transition-colors"
-            >
-              LEARN MORE ABOUT US
-            </Link>
-          </div>
-        </div>
-        <div className="relative min-h-full">
-          <Image
-            src="/images/woman-beach.jpg"
-            alt="Woman twirling on beach at golden hour"
-            fill
-            className="object-cover object-center"
-          />
+          
         </div>
       </div>
     </section>

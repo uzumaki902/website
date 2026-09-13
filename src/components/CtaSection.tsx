@@ -2,104 +2,52 @@ import Image from "next/image";
 
 export default function CtaSection() {
   return (
-    <section id="contact" className="relative bg-[#EDE8DE] overflow-hidden">
-
-      {/* ── MOBILE / TABLET: single column, no side images ── */}
-      <div className="lg:hidden px-6 md:px-10 py-14 md:py-20">
-        {/* Hero image on mobile */}
-        <div className="relative w-full h-[280px] md:h-[360px] overflow-hidden mb-10">
-          <Image
-            src="/images/hand-sand.jpg"
-            alt="Parent and child on beach"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        <p className="font-sans text-[12px] text-[#2C3A36] tracking-[0.18em] uppercase mb-6 font-medium">
-          SCHEDULE AN APPOINTMENT
-        </p>
-        <h2 className="font-serif text-[32px] md:text-[38px] font-light text-[#2C3A36] leading-[1.25] mb-6">
-          Find a therapist who is the right fit for{" "}
-          <span className="font-script text-[#62929A] italic text-[40px] md:text-[48px] inline-block ml-1">
-            you
-          </span>
-          .
-        </h2>
-        <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.8] mb-5">
-          Coming to therapy is a courageous decision, and connecting with the right kind of therapist
-          makes all the difference. We understand that your journey is personal, and we&apos;re here
-          to support you with care and understanding every step of the way. Each member of our team
-          brings dedicated expertise and a commitment to support you in your struggles. We want you
-          to feel prioritized, understood, and empowered.
-        </p>
-        <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.8] mb-8">
-          Click the button below to schedule an appointment.
-        </p>
-        <a
-          href="#"
-          className="inline-block border border-[#2C3A36] text-[#2C3A36] font-sans text-[12px] tracking-[0.2em] uppercase px-8 py-[14px] rounded-[50px] hover:bg-[#2C3A36] hover:text-white transition-colors"
-        >
-          BOOK NOW
-        </a>
-      </div>
-
-      {/* ── DESKTOP: 3-column grid with flanking images ── */}
-      <div
-        className="hidden lg:grid min-h-[640px] items-center"
-        style={{ gridTemplateColumns: "220px 1fr 480px" }}
-      >
-        {/* Left – Small Inset Image */}
-        <div className="pl-[40px] pr-0 py-[80px] h-full flex items-center">
-          <div className="relative w-full h-[380px] overflow-hidden">
-            <Image
-              src="/images/hand-sand.jpg"
-              alt="Hand touching shells in beach sand"
-              fill
-              className="object-cover object-center"
-            />
+    <section id="contact" className="py-[120px] lg:py-[180px] bg-[#F9F8F6]">
+      <div className="px-6 md:px-10 lg:px-[80px] max-w-[1600px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 lg:gap-12 items-center">
+          
+          {/* Left Small Image - 3 columns */}
+          <div className="md:col-span-3 hidden md:block">
+            <div className="aspect-[4/5] relative w-full opacity-90">
+              <Image
+                src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Close up of an open journal and pen"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 0vw, 25vw"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Center – Text Content */}
-        <div className="flex flex-col justify-center px-[60px] py-[120px]">
-          <p className="font-sans text-[13px] text-[#2C3A36] tracking-[0.18em] uppercase mb-8 font-medium">
-            SCHEDULE AN APPOINTMENT
-          </p>
-          <h2 className="font-serif text-[42px] font-light text-[#2C3A36] leading-[1.25] mb-8 max-w-lg">
-            Find a therapist who is the right fit for{" "}
-            <span className="font-script text-[#62929A] italic text-[52px] inline-block ml-1">
-              you
-            </span>
-            .
-          </h2>
-          <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.8] mb-6 max-w-lg">
-            Coming to therapy is a courageous decision, and connecting with the right kind of
-            therapist makes all the difference. We understand that your journey is personal, and
-            we&apos;re here to support you with care and understanding every step of the way. Each
-            member of our team brings dedicated expertise and a commitment to support you in your
-            struggles. We want you to feel prioritized, understood, and empowered.
-          </p>
-          <p className="font-sans text-[15px] text-[#7A6E63] leading-[1.8] mb-10">
-            Click the button below to schedule an appointment.
-          </p>
-          <div>
+          {/* Center Content - 6 columns */}
+          <div className="md:col-span-6 flex flex-col items-center text-center px-4">
+            <h2 className="font-serif text-[48px] md:text-[64px] lg:text-[80px] leading-[1] text-[#1E1D1C] mb-8">
+              THE DOOR<br />IS OPEN.
+            </h2>
+            <p className="font-sans text-[14px] md:text-[15px] text-[#3A3632] mb-12 max-w-md">
+              You do not have to carry the weight alone. Reach out to schedule a confidential consultation.
+            </p>
             <a
-              href="#"
-              className="inline-block border border-[#2C3A36] text-[#2C3A36] font-sans text-[12px] tracking-[0.2em] uppercase px-9 py-[14px] rounded-[50px] hover:bg-[#2C3A36] hover:text-white transition-colors"
+              href="mailto:contact@mayareynolds.com"
+              className="inline-block bg-[#1E1D1C] text-[#F9F8F6] font-sans text-[13px] tracking-[0.15em] px-12 py-5 rounded-[2px] hover:bg-[#C25E30] transition-colors uppercase"
             >
-              BOOK NOW
+              Request a Consultation
             </a>
           </div>
-        </div>
 
-        {/* Right – Full Height Image, flush to right edge */}
-        <div className="relative h-full min-h-[640px] overflow-hidden">
-          <Image
-            src="/images/hand-sand.jpg"
-            alt="Parent and child on beach pointing at shells"
-            fill
-            className="object-cover object-center"
-          />
+          {/* Right Tall Image - 3 columns */}
+          <div className="md:col-span-3 hidden md:block">
+            <div className="aspect-[3/4] relative w-full opacity-90">
+              <Image
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Architectural details of a calm space"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 0vw, 25vw"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
