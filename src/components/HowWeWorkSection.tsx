@@ -65,7 +65,7 @@ export default function HowWeWork() {
   };
 
   return (
-    <section className="bg-[#f7f5f1]">
+    <section id="approach" className="bg-[#f7f5f1]">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-12 lg:py-28">
         {/* Left: photo + pull quote */}
         <div className="mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">

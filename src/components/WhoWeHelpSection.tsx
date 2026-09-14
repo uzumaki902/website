@@ -74,7 +74,7 @@ export default function WhoWeHelpSection() {
   };
 
   return (
-    <section className="bg-[#F9F8F6]">
+    <section id="specialties" className="bg-[#F9F8F6]">
       <div className="mx-auto max-w-[1440px] px-6 py-20 sm:px-10 lg:px-[80px] lg:py-28">
         {/* Header row */}
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">

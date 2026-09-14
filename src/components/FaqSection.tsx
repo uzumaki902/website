@@ -62,7 +62,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faqs" className="bg-[#F9F8F6] py-24 lg:py-32">
+    <section id="faqs" className="bg-[#F9F8F6] py-16 md:py-24 lg:py-32">
       <div className="mx-auto max-w-[1000px] px-6 sm:px-10 lg:px-[80px]">
         {/* Header */}
         <motion.div

@@ -39,24 +39,24 @@ export default function QuoteBanner() {
 
   return (
     <motion.section 
-      className="py-[120px] lg:py-[180px]"
+      className="py-24 md:py-[120px] lg:py-[180px]"
       variants={reducedMotionFallback || containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-150px" }}
     >
       <div className="px-6 md:px-10 lg:px-[80px] max-w-[1200px] mx-auto text-center">
-        <motion.h2 variants={reducedMotionFallback || textVariants} className="font-serif text-[32px] md:text-[42px] lg:text-[52px] leading-[1.2] text-[#F9F8F6] mb-10">
+        <motion.blockquote variants={reducedMotionFallback || textVariants} className="font-serif text-[32px] md:text-[42px] lg:text-[52px] leading-[1.2] text-[#F9F8F6] mb-10">
           "The goal is not to stop feeling, but to feel safe enough to actually experience your life."
-        </motion.h2>
+        </motion.blockquote>
         <motion.div 
           variants={reducedMotionFallback || lineVariants} 
           className="w-12 h-px bg-[#C25E30] mx-auto mb-8"
           style={{ transformOrigin: "center" }}
         />
-        <motion.p variants={reducedMotionFallback || textVariants} className="font-sans text-[12px] md:text-[14px] tracking-[0.2em] text-[#8C857B] uppercase">
+        <motion.footer variants={reducedMotionFallback || textVariants} className="font-sans text-[12px] md:text-[14px] tracking-[0.2em] text-[#8C857B] uppercase">
           Dr. Maya Reynolds
-        </motion.p>
+        </motion.footer>
       </div>
     </motion.section>
   );

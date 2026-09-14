@@ -30,8 +30,8 @@ export default function BioSection() {
   };
 
   return (
-    <section className="bg-[#f7f5f1]">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:py-28 lg:px-12">
+    <section id="about" className="bg-[#f7f5f1]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 py-16 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:py-28 lg:px-12">
         {/* Left: Image */}
         <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
           <motion.div

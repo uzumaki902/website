@@ -73,7 +73,7 @@ export default function DoorIsOpen() {
         </motion.div>
 
         {/* Middle: centered content */}
-        <div className="order-3 flex items-center px-6 py-16 sm:px-10 lg:order-2 lg:px-10 lg:py-20 xl:px-14">
+        <div className="order-2 flex items-center px-6 py-16 sm:px-10 lg:px-10 lg:py-20 xl:px-14">
           <div className="mx-auto w-full max-w-sm text-center">
             <motion.p
               initial="hidden"
@@ -183,7 +183,7 @@ export default function DoorIsOpen() {
           viewport={{ once: true, amount: 0.3 }}
           custom={0.15}
           variants={imageReveal}
-          className="relative order-2 aspect-[4/5] w-full sm:aspect-[16/10] lg:order-3 lg:aspect-auto lg:h-full lg:min-h-[600px]"
+          className="relative order-3 aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[600px]"
         >
           <Image
             src="/images/rock.jpg"
