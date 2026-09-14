@@ -67,7 +67,7 @@ export default function TheWork() {
   };
 
   return (
-    <section className="bg-[#f7f5f1]">
+    <section className="bg-[#f7f5f1] pb-2 sm:pb-3">
       <div className="grid grid-cols-1 items-stretch lg:grid-cols-2">
         {/* Left: full-bleed photo */}
         <motion.div

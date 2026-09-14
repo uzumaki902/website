@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
-  const ease = [0.22, 1, 0.36, 1];
+  const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
   const staggerVariants = {
     hidden: {},
@@ -64,7 +64,7 @@ export default function HeroSection() {
             </p>
           </motion.div>
 
-          <h2 className="font-serif text-[42px] md:text-6xl leading-[1.05] text-[#1E1D1C] overflow-hidden">
+          <h1 className="font-serif text-[42px] md:text-6xl leading-[1.05] text-[#1E1D1C] overflow-hidden">
             <span className="block overflow-hidden pb-1">
               <motion.span variants={revealVariants} className="block">YOU LOOK LIKE</motion.span>
             </span>
@@ -74,7 +74,13 @@ export default function HeroSection() {
             <span className="block overflow-hidden pb-1">
               <motion.span variants={revealVariants} className="block text-[#C25E30]">ARE YOU?</motion.span>
             </span>
-          </h2>
+          </h1>
+
+          <motion.div variants={fadeUpVariants} className="mt-4 mb-2">
+            <p className="text-[11px] md:text-[12px] tracking-[0.05em] text-[#8C857B] font-sans">
+              Licensed Clinical Psychologist &middot; Anxiety, Trauma &amp; Burnout Therapy in Santa Monica, CA
+            </p>
+          </motion.div>
 
           <motion.p variants={fadeUpVariants} className="mt-8 text-[13px] tracking-[0.08em] text-[#8C857B] leading-relaxed max-w-md font-sans uppercase">
             FOR HIGH-ACHIEVING ADULTS READY TO MOVE
