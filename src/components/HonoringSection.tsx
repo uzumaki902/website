@@ -9,7 +9,7 @@ import { motion, useReducedMotion, Variants } from "framer-motion";
  * on the right, closing with an accent-colored "learn more" link.
  */
 
-const EASE = [0.22, 1, 0.36, 1] as any;
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 type Point = {
   number: string;

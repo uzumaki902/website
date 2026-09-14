@@ -11,7 +11,7 @@ export default function QuoteBanner() {
       backgroundColor: "rgba(30, 29, 28, 1)",
       transition: { 
         duration: 1.2, 
-        ease: "easeInOut" as any,
+        ease: "easeInOut" as const,
         when: "beforeChildren",
         staggerChildren: 0.3
       }
@@ -23,7 +23,7 @@ export default function QuoteBanner() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" as any } 
+      transition: { duration: 0.8, ease: "easeOut" as const } 
     }
   };
 
@@ -31,7 +31,7 @@ export default function QuoteBanner() {
     hidden: { scaleX: 0 },
     visible: { 
       scaleX: 1, 
-      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] as any } 
+      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] as const } 
     }
   };
 
@@ -47,7 +47,7 @@ export default function QuoteBanner() {
     >
       <div className="px-6 md:px-10 lg:px-[80px] max-w-[1200px] mx-auto text-center">
         <motion.blockquote variants={reducedMotionFallback || textVariants} className="font-serif text-[32px] md:text-[42px] lg:text-[52px] leading-[1.2] text-[#F9F8F6] mb-10">
-          "The goal is not to stop feeling, but to feel safe enough to actually experience your life."
+          &quot;The goal is not to stop feeling, but to feel safe enough to actually experience your life.&quot;
         </motion.blockquote>
         <motion.div 
           variants={reducedMotionFallback || lineVariants} 

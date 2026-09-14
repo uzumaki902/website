@@ -11,7 +11,7 @@ import type { ElementType } from "react";
  * a second full-bleed image on the right.
  */
 
-const EASE = [0.22, 1, 0.36, 1] as any;
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 type TrustItem = {
   icon: ElementType;

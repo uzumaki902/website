@@ -10,7 +10,7 @@ import { motion, useReducedMotion, Variants } from "framer-motion";
  * photos. Right: short italic captions aligned beside each photo.
  */
 
-const EASE = [0.22, 1, 0.36, 1] as any;
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function OurOffice() {
   const shouldReduceMotion = useReducedMotion();

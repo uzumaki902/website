@@ -60,7 +60,7 @@ export default function WhoWeHelpSection() {
     show: (delay: number = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: EASE as any, delay },
+      transition: { duration: 0.7, ease: EASE, delay },
     }),
   };
 
@@ -69,7 +69,7 @@ export default function WhoWeHelpSection() {
     show: (delay: number = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: EASE as any, delay },
+      transition: { duration: 0.7, ease: EASE, delay },
     }),
   };
 

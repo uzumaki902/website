@@ -38,7 +38,7 @@ const METHODS = [
 
 export default function ExpertiseSection() {
   const shouldReduceMotion = useReducedMotion();
-  const EASE = [0.22, 1, 0.36, 1] as any;
+  const EASE = [0.22, 1, 0.36, 1] as const;
 
   const containerVariants: Variants = {
     hidden: {},
