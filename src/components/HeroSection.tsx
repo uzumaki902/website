@@ -127,7 +127,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
-              className="absolute bottom-10 left-6 flex items-start gap-3 z-10 pointer-events-none"
+              className="hidden md:flex absolute bottom-10 left-6 items-start gap-3 z-10 pointer-events-none"
             >
               <span className="block h-14 w-[2px] bg-white/70" />
               <p className="text-[10px] tracking-[0.1em] text-white leading-relaxed max-w-[110px] font-sans">
@@ -169,7 +169,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8 }}
-              className="absolute top-8 right-6 text-right z-10 pointer-events-none"
+              className="hidden md:block absolute top-8 right-6 text-right z-10 pointer-events-none"
             >
               <p className="text-[10px] tracking-[0.15em] text-white font-medium font-sans">
                 DR. MAYA REYNOLDS, PSYD
