@@ -100,7 +100,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Right: split image */}
-        <div className="relative h-[450px] md:h-[450px] lg:h-[540px] w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden lg:rounded-l-sm">
+        <div className="relative h-[350px] md:h-[450px] lg:h-[540px] w-full grid grid-cols-1 md:grid-cols-2 overflow-hidden lg:rounded-l-sm">
           {/* Left photo: crowd */}
           <motion.div 
             className="relative h-full w-full overflow-hidden"
@@ -138,7 +138,7 @@ export default function HeroSection() {
 
           {/* Right photo: Maya Reynolds */}
           <motion.div 
-            className="relative h-full w-full overflow-hidden"
+            className="relative h-full w-full overflow-hidden hidden md:block"
             initial="hidden"
             animate="visible"
             variants={{
