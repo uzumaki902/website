@@ -25,7 +25,7 @@ const FAQS: FAQ[] = [
   },
   {
     question: "Who do you typically work with?",
-    answer: "I primarily work with high-achieving, thoughtful, and self-aware adults—including professionals, entrepreneurs, and creatives. Many of my clients are navigating anxiety, trauma, burnout, or perfectionism.",
+    answer: "I primarily work with high-achieving, thoughtful, and self-aware adults, including professionals, entrepreneurs, and creatives. Many of my clients are navigating anxiety, trauma, burnout, or perfectionism.",
   },
   {
     question: "Is what I share confidential?",

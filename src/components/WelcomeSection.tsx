@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, Variants } from "framer-motion";
 
 /**
- * "The Reality" section — editorial copy on the left, a single portrait
+ * "The Reality" section, editorial copy on the left, a single portrait
  * photograph on the right set against an offset background panel that
  * peeks out from behind it (no card border/shadow on the photo itself).
  */

@@ -96,7 +96,7 @@ export default function BioSection() {
             className="mt-8 space-y-5 text-[15px] leading-relaxed text-[#1E1D1C]"
           >
             <p>
-              I work with high-achieving, thoughtful, and self-aware adults—including professionals, entrepreneurs, and creatives—who are dealing with anxiety, trauma, burnout, and perfectionism.
+              I work with high-achieving, thoughtful, and self-aware adults, including professionals, entrepreneurs, and creatives, who are dealing with anxiety, trauma, burnout, and perfectionism.
             </p>
             <p>
               My approach is warm, collaborative, and grounded. I pace therapy carefully with an emphasis on safety and stabilization, integrating evidence-based methods like CBT, EMDR, mindfulness-based practices, and body-oriented approaches to foster lasting resilience rather than just symptom relief.

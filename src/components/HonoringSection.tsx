@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, Variants } from "framer-motion";
 
 /**
- * "The Work" — a full-bleed photo on the left (flush to the section edges,
+ * "The Work", a full-bleed photo on the left (flush to the section edges,
  * no offset frame) and an eyebrow/heading/intro with a short numbered list
  * on the right, closing with an accent-colored "learn more" link.
  */

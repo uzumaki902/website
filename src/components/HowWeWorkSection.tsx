@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, Variants } from "framer-motion";
 
 /**
- * "How We Work" — a therapy-session photo with a pull quote on the left,
+ * "How We Work", a therapy-session photo with a pull quote on the left,
  * and an eyebrow/heading/intro followed by a numbered 4-step process on
  * the right, closing with an accent-colored "learn more" link.
  */

@@ -6,7 +6,7 @@ import { motion, useReducedMotion, Variants } from "framer-motion";
 import type { ElementType } from "react";
 
 /**
- * "Specialties" — eyebrow/heading/intro with a 2x2 grid of secondary
+ * "Specialties", eyebrow/heading/intro with a 2x2 grid of secondary
  * concerns (icon + title + description) on the left, and a full-bleed
  * lifestyle photo with an overlaid pull quote on the right.
  */

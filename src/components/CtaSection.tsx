@@ -6,7 +6,7 @@ import { motion, useReducedMotion, Variants } from "framer-motion";
 import type { ElementType } from "react";
 
 /**
- * Closing CTA — a full-bleed surreal image on the left, centered
+ * Closing CTA, a full-bleed surreal image on the left, centered
  * eyebrow/heading/copy/button/trust-icons/closing line in the middle, and
  * a second full-bleed image on the right.
  */

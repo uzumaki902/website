@@ -5,7 +5,7 @@ import { Laptop, MapPin } from "lucide-react";
 import { motion, useReducedMotion, Variants } from "framer-motion";
 
 /**
- * "Our Office" — a dark, editorial section. Left: eyebrow, heading, intro,
+ * "Our Office", a dark, editorial section. Left: eyebrow, heading, intro,
  * two icon+label detail rows, and a CTA link. Middle: two stacked office
  * photos. Right: short italic captions aligned beside each photo.
  */
