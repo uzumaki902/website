@@ -1,123 +1,198 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { CalendarCheck, Lock, Sprout } from "lucide-react";
+import { motion, useReducedMotion, Variants } from "framer-motion";
+import type { ElementType } from "react";
 
-export default function CtaSection() {
+/**
+ * Closing CTA — a full-bleed surreal image on the left, centered
+ * eyebrow/heading/copy/button/trust-icons/closing line in the middle, and
+ * a second full-bleed image on the right.
+ */
+
+const EASE = [0.22, 1, 0.36, 1] as any;
+
+type TrustItem = {
+  icon: ElementType;
+  label: string;
+};
+
+const TRUST_ITEMS: TrustItem[] = [
+  { icon: Lock, label: "CONFIDENTIAL" },
+  { icon: CalendarCheck, label: "FLEXIBLE OPTIONS" },
+  { icon: Sprout, label: "A MORE\nGROUNDED YOU" },
+];
+
+export default function DoorIsOpen() {
   const shouldReduceMotion = useReducedMotion();
-  const sectionRef = useRef<HTMLElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
 
-  // Very subtle parallax: Moves down 30px to up 30px as user scrolls
-  const yParallaxLeft = useTransform(scrollYProgress, [0, 1], [shouldReduceMotion ? 0 : 20, shouldReduceMotion ? 0 : -20]);
-  const yParallaxRight = useTransform(scrollYProgress, [0, 1], [shouldReduceMotion ? 0 : -20, shouldReduceMotion ? 0 : 20]);
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const textRevealVariants = {
-    hidden: { y: "100%" },
-    visible: {
-      y: 0,
-      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
+  const fadeUp: Variants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 16 },
+    show: (delay: number = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" }
-    }
+      transition: { duration: 0.7, ease: EASE, delay },
+    }),
   };
 
-  const reducedMotionFallback = shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.5 } } } : null;
+  const imageReveal: Variants = {
+    hidden: {
+      opacity: 0,
+      clipPath: shouldReduceMotion
+        ? "inset(0% 0% 0% 0%)"
+        : "inset(0% 0% 100% 0%)",
+      scale: shouldReduceMotion ? 1 : 1.02,
+    },
+    show: {
+      opacity: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      scale: 1,
+      transition: { duration: 1.1, ease: EASE },
+    },
+  };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-[120px] lg:py-[180px] bg-[#F9F8F6] overflow-hidden">
-      <div className="px-6 md:px-10 lg:px-[80px] max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 lg:gap-12 items-center">
-          
-          {/* Left Small Image - 3 columns */}
-          <div className="md:col-span-3 hidden md:block">
-            <motion.div 
-              className="aspect-[4/5] relative w-full opacity-90"
-              style={{ y: yParallaxLeft }}
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Close up of an open journal and pen"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 0vw, 25vw"
-              />
-            </motion.div>
-          </div>
+    <section className="bg-[#f7f5f1]">
+      <div className="grid grid-cols-1 items-stretch lg:grid-cols-[31%_38%_31%]">
+        {/* Left: full-bleed image */}
+        <motion.div
+          initial="show"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={imageReveal}
+          className="relative order-1 aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[600px]"
+        >
+          <Image
+            src="/images/door.jpg"
+            alt="A surreal open doorway revealing a sunlit grassy field with a single chair"
+            fill
+            sizes="(min-width: 1024px) 31vw, 100vw"
+            className="object-cover"
+          />
+        </motion.div>
 
-          {/* Center Content - 6 columns */}
-          <motion.div 
-            className="md:col-span-6 flex flex-col items-center text-center px-4"
-            variants={reducedMotionFallback || containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <div className="font-serif text-[48px] md:text-[64px] lg:text-[80px] leading-[1] text-[#1E1D1C] mb-8 flex flex-col gap-2">
-              <div className="overflow-hidden py-1">
-                <motion.div variants={reducedMotionFallback || textRevealVariants}>THE DOOR</motion.div>
-              </div>
-              <div className="overflow-hidden py-1">
-                <motion.div variants={reducedMotionFallback || textRevealVariants}>IS OPEN.</motion.div>
-              </div>
-            </div>
-            <motion.p variants={reducedMotionFallback || itemVariants} className="font-sans text-[14px] md:text-[15px] text-[#3A3632] mb-12 max-w-md">
-              You do not have to carry the weight alone. Reach out to schedule a confidential consultation.
+        {/* Middle: centered content */}
+        <div className="order-3 flex items-center px-6 py-16 sm:px-10 lg:order-2 lg:px-10 lg:py-20 xl:px-14">
+          <div className="mx-auto w-full max-w-sm text-center">
+            <motion.p
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.7 }}
+              custom={0}
+              variants={fadeUp}
+              className="text-[11px] tracking-[0.2em] text-neutral-500"
+            >
+              TAKE THE NEXT STEP
             </motion.p>
-            <motion.div variants={reducedMotionFallback || itemVariants}>
-              <motion.a
-                href="mailto:contact@mayareynolds.com"
-                className="inline-block bg-[#1E1D1C] text-[#F9F8F6] font-sans text-[13px] tracking-[0.15em] px-12 py-5 rounded-[2px] transition-colors uppercase group"
-                whileHover={shouldReduceMotion ? {} : { backgroundColor: "#C25E30" }}
-                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
-                transition={{ duration: 0.2 }}
-              >
-                <span className="relative z-10 flex items-center">
-                  REQUEST A CONSULTATION &nbsp;
-                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
-                </span>
-              </motion.a>
-            </motion.div>
-          </motion.div>
 
-          {/* Right Tall Image - 3 columns */}
-          <div className="md:col-span-3 hidden md:block">
-            <motion.div 
-              className="aspect-[3/4] relative w-full opacity-90"
-              style={{ y: yParallaxRight }}
+            <motion.h2
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.4 }}
+              custom={0.08}
+              variants={fadeUp}
+              className="mt-4 font-serif text-[2.75rem] leading-[1.1] text-neutral-900 sm:text-[3.1rem]"
             >
-              <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Architectural details of a calm space"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 0vw, 25vw"
-              />
-            </motion.div>
-          </div>
+              The Door
+              <br />
+              Is Open.
+            </motion.h2>
 
+            <motion.span
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.8 }}
+              custom={0.16}
+              variants={fadeUp}
+              className="mx-auto mt-6 block h-px w-10 bg-neutral-300"
+            />
+
+            <motion.p
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.5 }}
+              custom={0.22}
+              variants={fadeUp}
+              className="mt-6 text-[15px] leading-relaxed text-neutral-500"
+            >
+              You don&rsquo;t have to carry the weight alone. Reach out to
+              schedule a confidential consultation and take the first step
+              toward a more grounded, fulfilling life.
+            </motion.p>
+
+            <motion.a
+              href="#contact"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.7 }}
+              custom={0.3}
+              variants={fadeUp}
+              className="mt-8 flex items-center justify-center gap-3 bg-[#b1552f] px-8 py-4 text-[12px] tracking-[0.15em] text-white transition-colors hover:bg-[#96431f]"
+            >
+              REQUEST A CONSULTATION
+              <span aria-hidden="true">&rarr;</span>
+            </motion.a>
+
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.6 }}
+              custom={0.38}
+              variants={fadeUp}
+              className="mt-10 grid grid-cols-3 divide-x divide-neutral-300"
+            >
+              {TRUST_ITEMS.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.label}
+                    className="flex flex-col items-center gap-2 px-2"
+                  >
+                    <Icon
+                      className="h-5 w-5 text-[#b1552f]"
+                      strokeWidth={1.5}
+                    />
+                    <p className="whitespace-pre-line text-[10px] leading-tight tracking-[0.1em] text-neutral-500">
+                      {item.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </motion.div>
+
+            <motion.p
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.8 }}
+              custom={0.46}
+              variants={fadeUp}
+              className="mt-10 font-serif text-base italic leading-snug text-neutral-400"
+            >
+              Healing is possible.
+              <br />
+              And it can start here.
+            </motion.p>
+          </div>
         </div>
+
+        {/* Right: full-bleed image */}
+        <motion.div
+          initial="show"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          custom={0.15}
+          variants={imageReveal}
+          className="relative order-2 aspect-[4/5] w-full sm:aspect-[16/10] lg:order-3 lg:aspect-auto lg:h-full lg:min-h-[600px]"
+        >
+          <Image
+            src="/images/rock.jpg"
+            alt="A conceptual image of a man at a desk burdened by an oversized boulder on his back"
+            fill
+            sizes="(min-width: 1024px) 31vw, 100vw"
+            className="object-cover"
+          />
+        </motion.div>
       </div>
     </section>
   );
