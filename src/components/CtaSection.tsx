@@ -61,14 +61,14 @@ export default function DoorIsOpen() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={imageReveal}
-          className="relative order-1 aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[600px]"
+          className="relative order-1 aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[600px] overflow-hidden"
         >
           <Image
             src="/images/door.jpg"
             alt="A surreal open doorway revealing a sunlit grassy field with a single chair"
             fill
             sizes="(min-width: 1024px) 31vw, 100vw"
-            className="object-cover"
+            className="object-cover scale-[1.05]"
           />
         </motion.div>
 
