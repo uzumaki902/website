@@ -77,8 +77,8 @@ export default function HeroSection() {
           </h1>
 
           <motion.div variants={fadeUpVariants} className="mt-4 mb-2">
-            <p className="text-[11px] md:text-[12px] tracking-[0.05em] text-[#8C857B] font-sans">
-              Licensed Clinical Psychologist &middot; Anxiety, Trauma &amp; Burnout Therapy in Santa Monica, CA
+            <p className="text-[11px] md:text-[12px] tracking-[0.05em] text-[#8C857B] font-sans uppercase">
+              Individual therapy for high-achieving adults in Santa Monica, California.
             </p>
           </motion.div>
 

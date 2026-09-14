@@ -75,7 +75,7 @@ export default function OurOffice() {
             viewport={{ once: true, amount: 0.5 }}
             custom={0.18}
             variants={fadeUp}
-            className="mt-6 text-[15px] leading-relaxed text-white/60"
+            className="mt-6 text-[15px] leading-relaxed text-white/85"
           >
             My Santa Monica office is a quiet, private space designed to
             feel calm and grounding. Natural light, comfortable
